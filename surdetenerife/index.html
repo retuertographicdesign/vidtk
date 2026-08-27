@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Guía en vídeo</title>
+<style>
+  :root{
+    --bg: #F1E8D9;
+    --card: #FFFFFF;
+    --line: #E4D6BE;
+    --ink: #22261E;
+    --ink-dim: #6B6255;
+    --green: #1F5C34;
+    --green-dark: #17472A;
+    --green-tint: #E7F0E5;
+    --warn: #C0392B;
+  }
+  *{ box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  html,body{ height:100%; margin:0; }
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    overflow:hidden;
+    height:100vh; height:100dvh;
+  }
+  .screen{
+    position:absolute; inset:0;
+    display:flex; flex-direction:column;
+    opacity:0; pointer-events:none;
+    transition:opacity .3s ease;
+  }
+  .screen.active{ opacity:1; pointer-events:auto; }
+
+  /* ---------- Pantalla 1: idioma ---------- */
+  #screen-lang{
+    align-items:center; justify-content:center;
+    padding: max(20px, env(safe-area-inset-top)) 20px max(20px, env(safe-area-inset-bottom));
+  }
+  .lang-wrap{ width:100%; max-width:460px; text-align:center; }
+  .brand{ display:flex; flex-direction:column; align-items:center; margin-bottom:22px; }
+  .brand-logo{ width:200px; max-width:72vw; height:auto; margin-bottom:12px; }
+  .brand-tagline{ font-size:13px; color:var(--ink-dim); font-weight:600; line-height:1.4; }
+  .brand-tagline strong{ display:block; color:var(--ink); font-weight:800; font-size:15px; letter-spacing:.01em; }
+  .lang-wrap h1{ font-size:25px; font-weight:800; letter-spacing:-0.01em; margin:0 0 6px; color:var(--ink); }
+  .lang-wrap p{ margin:0 0 24px; color:var(--ink-dim); font-size:14px; line-height:1.5; }
+  .lang-grid{
+    display:grid; grid-template-columns:repeat(4, 1fr);
+    gap:10px;
+  }
+  .lang-btn{
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px;
+    padding:16px 6px;
+    background:var(--card); border:1px solid var(--line); border-radius:14px;
+    color:var(--ink); font-size:13px; font-weight:700; letter-spacing:.03em;
+    box-shadow:0 1px 2px rgba(34,38,30,0.05);
+  }
+  .lang-btn .flag{ font-size:26px; line-height:1; }
+  .lang-btn:active{ background:var(--green-tint); border-color:var(--green); }
+
+  /* ---------- Pantalla 2: teclado ---------- */
+  #screen-keypad{ padding:0; }
+  .keypad-wrap{
+    width:100%; height:100%;
+    display:flex; flex-direction:column;
+    padding: max(14px, env(safe-area-inset-top)) 16px max(14px, env(safe-area-inset-bottom));
+  }
+  .keypad-top{ flex-shrink:0; text-align:center; padding-bottom:10px; }
+  .keypad-eyebrow{
+    display:inline-block; background:var(--green-tint); color:var(--green);
+    font-size:11px; letter-spacing:.12em; text-transform:uppercase; font-weight:800;
+    padding:4px 12px; border-radius:999px; margin-bottom:8px;
+  }
+  .keypad-display{
+    font-size:clamp(26px, 7vh, 42px); font-weight:800; letter-spacing:.05em;
+    font-variant-numeric:tabular-nums; color:var(--ink); line-height:1.1;
+  }
+  .keypad-display.empty{ color:var(--ink-dim); opacity:.5; }
+  .keypad-hint{ font-size:12px; color:var(--ink-dim); min-height:16px; margin-top:2px; font-weight:600; }
+  .keypad-hint.warn{ color:var(--warn); }
+  .keypad-grid{
+    flex:1; min-height:0;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows:repeat(4, 1fr);
+    gap:min(2.4vh, 2.4vw, 14px);
+  }
+  .key{
+    width:100%; height:100%; border-radius:18px;
+    background:var(--card); border:1px solid var(--line);
+    color:var(--ink); font-weight:700;
+    font-size:clamp(18px, 5vh, 30px);
+    display:flex; align-items:center; justify-content:center;
+    font-variant-numeric:tabular-nums;
+    box-shadow:0 1px 2px rgba(34,38,30,0.05);
+  }
+  .key:active{ background:var(--green-tint); border-color:var(--green); }
+  .key.func{ color:var(--ink-dim); font-size:clamp(13px, 3vh, 18px); box-shadow:none; }
+  .key.play{ background:var(--green); border-color:var(--green); color:#fff; }
+  .key.play:active{ background:var(--green-dark); }
+
+  /* Móvil horizontal: cabecera más compacta y teclas circulares con más separación,
+     pensadas para dedos anchos sobre una fila de poca altura. */
+  @media (orientation: landscape) and (max-height: 560px){
+    .keypad-top{ padding-bottom:2px; }
+    .keypad-eyebrow{ font-size:9px; padding:3px 10px; margin-bottom:3px; }
+    .keypad-display{ font-size:clamp(18px, 4vh, 26px); line-height:1; }
+    .keypad-hint{ font-size:10px; min-height:10px; margin-top:1px; }
+    .keypad-grid{
+      row-gap: min(1.6vh, 10px);
+      column-gap: min(1.2vw, 6px);
+      align-items:center; justify-items:center;
+    }
+    .key{
+      width:auto; height:100%; aspect-ratio:1;
+      max-width:100%; border-radius:50%;
+    }
+    .key.func{ font-size:clamp(12px, 3vh, 16px); }
+  }
+
+  /* ---------- Botón de micrófono (órdenes por voz) ---------- */
+  .mic-btn{
+    position:absolute; top:calc(14px + env(safe-area-inset-top,0px)); right:16px;
+    width:42px; height:42px; border-radius:50%;
+    background:var(--card); border:1px solid var(--line);
+    color:var(--green); font-size:18px;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 1px 2px rgba(34,38,30,0.05);
+    z-index:5;
+  }
+  .mic-btn:active{ background:var(--green-tint); }
+  .mic-btn.listening{
+    background:var(--green); color:#fff; border-color:var(--green);
+    animation: mic-pulse 1.2s ease-in-out infinite;
+  }
+  @keyframes mic-pulse{
+    0%,100%{ box-shadow:0 0 0 0 rgba(31,92,52,0.45); }
+    50%{ box-shadow:0 0 0 10px rgba(31,92,52,0); }
+  }
+
+  /* ---------- Pantalla 3: vídeo ---------- */
+  #screen-player{ background:#000; align-items:center; justify-content:center; }
+  #video{ width:100%; height:100%; object-fit:contain; background:#000; }
+  .player-close{
+    position:absolute; top:calc(16px + env(safe-area-inset-top,0px)); right:16px;
+    width:38px; height:38px; border-radius:50%;
+    background:rgba(255,255,255,0.9); border:1px solid var(--line);
+    color:var(--ink); font-size:16px;
+    display:flex; align-items:center; justify-content:center;
+    z-index:5;
+  }
+  .player-error{
+    position:absolute; inset:0; background:var(--bg);
+    display:none; flex-direction:column;
+    align-items:center; justify-content:center; text-align:center; padding:32px;
+    color:var(--ink-dim); font-size:14px; line-height:1.6;
+  }
+  .player-error.show{ display:flex; }
+  .player-error b{ color:var(--ink); display:block; margin-bottom:8px; font-size:16px; font-weight:800; }
+  .player-loading{
+    position:absolute; inset:0; background:#000; display:none;
+    flex-direction:column; align-items:center; justify-content:center; gap:14px;
+    color:rgba(255,255,255,0.7); font-size:13px; letter-spacing:.06em; text-transform:uppercase;
+  }
+  .player-loading.show{ display:flex; }
+  .spinner{
+    width:34px; height:34px; border-radius:50%;
+    border:2.5px solid rgba(255,255,255,0.2); border-top-color:var(--green);
+    animation:spin .8s linear infinite;
+  }
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+</style>
+</head>
+<body>
+
+  <!-- Pantalla 1: idioma -->
+  <section id="screen-lang" class="screen active">
+    <div class="lang-wrap">
+      <div class="brand">
+        <img src="logo.png" alt="Toke Tuk Canarias" class="brand-logo">
+        <div class="brand-tagline">
+          <strong>Guía Toke Tuk</strong>
+          <span>Descubre Canarias 🌴</span>
+        </div>
+      </div>
+      <h1>Elige tu idioma</h1>
+      <p>Se usará para el vídeo de cada parada.</p>
+      <div class="lang-grid" id="lang-grid"></div>
+    </div>
+  </section>
+
+  <!-- Pantalla 2: teclado -->
+  <section id="screen-keypad" class="screen">
+    <button class="mic-btn" id="btn-mic" aria-label="Decir el número por voz">🎤</button>
+    <div class="keypad-wrap">
+      <div class="keypad-top">
+        <div class="keypad-eyebrow" id="txt-eyebrow">15 vídeos</div>
+        <div class="keypad-display empty" id="keypad-display">— —</div>
+        <div class="keypad-hint" id="keypad-hint">Escribe el número y pulsa ▶</div>
+      </div>
+      <div class="keypad-grid" id="keypad-grid"></div>
+    </div>
+  </section>
+
+  <!-- Pantalla 3: reproductor -->
+  <section id="screen-player" class="screen">
+    <button class="player-close" id="btn-close">✕</button>
+    <video id="video" playsinline webkit-playsinline></video>
+    <div class="player-error" id="player-error">
+      <b>Vídeo no disponible</b>
+      <span id="txt-error-body"></span>
+    </div>
+    <div class="player-loading" id="player-loading">
+      <div class="spinner"></div>
+      <span>Cargando</span>
+    </div>
+  </section>
+
+<script>
+(function(){
+  let CONFIG = null;
+  let currentLang = null;
+  let typedDigits = '';
+
+  const screens = {
+    lang: document.getElementById('screen-lang'),
+    keypad: document.getElementById('screen-keypad'),
+    player: document.getElementById('screen-player')
+  };
+  function show(screen){
+    Object.values(screens).forEach(s => s.classList.remove('active'));
+    screen.classList.add('active');
+  }
+
+  fetch('videos.json?v=' + Date.now()).then(r => r.json()).then(cfg => {
+    CONFIG = cfg;
+    renderLangButtons();
+  }).catch(() => {
+    document.querySelector('#screen-lang h1').textContent = 'Error cargando videos.json';
+    document.querySelector('#screen-lang p').textContent = 'Comprueba que index.html y videos.json estén en la misma carpeta.';
+  });
+
+  function renderLangButtons(){
+    const grid = document.getElementById('lang-grid');
+    grid.innerHTML = '';
+    CONFIG.languages.forEach(lang => {
+      const btn = document.createElement('button');
+      btn.className = 'lang-btn';
+      const flagHtml = lang.flag ? '<span class="flag">' + lang.flag + '</span>' : '';
+      btn.innerHTML = flagHtml + '<span>' + lang.label + '</span>';
+      btn.addEventListener('click', () => selectLanguage(lang.code));
+      grid.appendChild(btn);
+    });
+  }
+
+  function selectLanguage(code){
+    currentLang = code;
+    document.getElementById('txt-eyebrow').textContent = CONFIG.stops.length + ' vídeos';
+    renderKeypad();
+    resetKeypadInput();
+    show(screens.keypad);
+  }
+
+  // ---- Teclado numérico ----
+  function renderKeypad(){
+    const grid = document.getElementById('keypad-grid');
+    grid.innerHTML = '';
+    const keys = ['1','2','3','4','5','6','7','8','9','C','0','▶'];
+    keys.forEach(k => {
+      const btn = document.createElement('button');
+      btn.className = 'key' + (k === 'C' ? ' func' : '') + (k === '▶' ? ' play' : '');
+      btn.textContent = k;
+      btn.addEventListener('click', () => handleKey(k));
+      grid.appendChild(btn);
+    });
+  }
+
+  function resetKeypadInput(){
+    typedDigits = '';
+    updateKeypadDisplay();
+  }
+
+  function updateKeypadDisplay(){
+    const display = document.getElementById('keypad-display');
+    const hint = document.getElementById('keypad-hint');
+    if (typedDigits === '') {
+      display.textContent = '— —';
+      display.classList.add('empty');
+    } else {
+      display.textContent = typedDigits;
+      display.classList.remove('empty');
+    }
+    hint.textContent = 'Escribe el número y pulsa ▶';
+    hint.classList.remove('warn');
+  }
+
+  function handleKey(k){
+    if (k === 'C') { resetKeypadInput(); return; }
+    if (k === '▶') { confirmPlay(); return; }
+    if (typedDigits.length >= 2) return;
+    typedDigits += k;
+    updateKeypadDisplay();
+  }
+
+  function confirmPlay(){
+    if (typedDigits === '') return;
+    tryPlayNumber(parseInt(typedDigits, 10));
+  }
+
+  function tryPlayNumber(num){
+    const stop = CONFIG.stops.find(s => s.num === num);
+    if (!stop) {
+      const hint = document.getElementById('keypad-hint');
+      hint.textContent = 'No existe el vídeo ' + num;
+      hint.classList.add('warn');
+      setTimeout(resetKeypadInput, 900);
+      return;
+    }
+    resetKeypadInput();
+    playStop(stop);
+  }
+
+  // ---- Reproductor ----
+  function playStop(stop){
+    const file = stop.files[currentLang];
+    const video = document.getElementById('video');
+    const errBox = document.getElementById('player-error');
+    const loadingBox = document.getElementById('player-loading');
+
+    if (!file) {
+      document.getElementById('txt-error-body').textContent =
+        'No hay vídeo de "' + stop.name + '" en este idioma todavía.';
+      video.style.display = 'none';
+      loadingBox.classList.remove('show');
+      errBox.classList.add('show');
+      show(screens.player);
+      return;
+    }
+
+    const url = encodeURI(CONFIG.videoBaseUrl + file);
+    document.getElementById('txt-error-body').textContent =
+      'No se encuentra el archivo de "' + stop.name + '" en este idioma. Comprueba que el vídeo esté subido con el nombre correcto.';
+    errBox.classList.remove('show');
+    video.style.display = 'block';
+    video.style.visibility = 'hidden';
+    loadingBox.classList.add('show');
+    video.src = url;
+    show(screens.player);
+
+    video.play().catch(() => {});
+    if (screens.player.requestFullscreen) {
+      screens.player.requestFullscreen().catch(() => {});
+    } else if (video.webkitEnterFullscreen) {
+      video.webkitEnterFullscreen();
+    }
+
+    video.onplaying = () => {
+      loadingBox.classList.remove('show');
+      video.style.visibility = 'visible';
+    };
+
+    video.onerror = () => {
+      loadingBox.classList.remove('show');
+      video.style.display = 'none';
+      errBox.classList.add('show');
+    };
+
+    video.onended = () => {
+      returnToKeypad();
+    };
+  }
+
+  function returnToKeypad(){
+    const video = document.getElementById('video');
+    video.pause();
+    video.removeAttribute('src');
+    video.load();
+    document.getElementById('player-loading').classList.remove('show');
+    if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
+    resetKeypadInput();
+    show(screens.keypad);
+  }
+
+  document.getElementById('btn-close').addEventListener('click', returnToKeypad);
+
+  // ---- Órdenes por voz ----
+  const NUMBER_WORDS = {
+    'cero':0, 'uno':1,'una':1, 'dos':2, 'tres':3, 'cuatro':4, 'cinco':5,
+    'seis':6, 'siete':7, 'ocho':8, 'nueve':9, 'diez':10,
+    'once':11, 'doce':12, 'trece':13, 'catorce':14, 'quince':15,
+    'dieciseis':16, 'dieciséis':16, 'diecisiete':17, 'dieciocho':18, 'diecinueve':19, 'veinte':20
+  };
+
+  function wordsToNumber(text){
+    if (!text) return null;
+    const clean = text.toLowerCase().trim();
+    if (NUMBER_WORDS.hasOwnProperty(clean)) return NUMBER_WORDS[clean];
+    const words = clean.split(/\s+/);
+    for (const w of words) {
+      if (NUMBER_WORDS.hasOwnProperty(w)) return NUMBER_WORDS[w];
+    }
+    return null;
+  }
+
+  function extractNumber(transcript){
+    const digitMatch = transcript.replace(/\s+/g, '').match(/\d{1,2}/);
+    if (digitMatch) return parseInt(digitMatch[0], 10);
+    return wordsToNumber(transcript);
+  }
+
+  function setupVoice(){
+    const micBtn = document.getElementById('btn-mic');
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+      micBtn.style.display = 'none';
+      return;
+    }
+
+    const recognition = new SpeechRecognition();
+    recognition.lang = 'es-ES';
+    recognition.continuous = false;
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 3;
+    let listening = false;
+
+    micBtn.addEventListener('click', () => {
+      if (listening) { recognition.stop(); return; }
+      try { recognition.start(); } catch (e) {}
+    });
+
+    recognition.onstart = () => {
+      listening = true;
+      micBtn.classList.add('listening');
+      const hint = document.getElementById('keypad-hint');
+      hint.textContent = 'Escuchando… di el número';
+      hint.classList.remove('warn');
+    };
+
+    recognition.onend = () => {
+      listening = false;
+      micBtn.classList.remove('listening');
+    };
+
+    recognition.onerror = () => {
+      listening = false;
+      micBtn.classList.remove('listening');
+      const hint = document.getElementById('keypad-hint');
+      hint.textContent = 'No se ha entendido, inténtalo de nuevo';
+      hint.classList.add('warn');
+      setTimeout(updateKeypadDisplay, 1300);
+    };
+
+    recognition.onresult = (event) => {
+      const alternatives = Array.from(event.results[0]).map(r => r.transcript);
+      let num = null;
+      for (const t of alternatives) {
+        num = extractNumber(t);
+        if (num !== null) break;
+      }
+      if (num !== null) {
+        tryPlayNumber(num);
+      } else {
+        const hint = document.getElementById('keypad-hint');
+        hint.textContent = 'No he entendido el número';
+        hint.classList.add('warn');
+        setTimeout(updateKeypadDisplay, 1300);
+      }
+    };
+  }
+
+  setupVoice();
+})();
+</script>
+</body>
+</html>

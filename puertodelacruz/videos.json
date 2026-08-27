@@ -1,0 +1,61 @@
+{
+  "languages": [
+    { "code": "es", "label": "ES", "flag": "🇪🇸" },
+    { "code": "en", "label": "EN", "flag": "🇬🇧" },
+    { "code": "de", "label": "DE", "flag": "🇩🇪" },
+    { "code": "fr", "label": "FR", "flag": "🇫🇷" },
+    { "code": "it", "label": "IT", "flag": "🇮🇹" },
+    { "code": "ru", "label": "RU", "flag": "🇷🇺" },
+    { "code": "pt", "label": "PT", "flag": "🇵🇹" },
+    { "code": "nl", "label": "NL", "flag": "🇳🇱" }
+  ],
+  "videoBaseUrl": "http://localhost:8080/",
+  "stops": [
+    { "num": 1, "name": "Ermita de San Telmo (vía no accesible)", "files": {
+        "es": "ermita-de-san-telmo-es.mp4", "en": "ermita-de-san-telmo-en.mp4", "de": "ermita-de-san-telmo-de.mp4",
+        "fr": "ermita-de-san-telmo-fr.mp4", "it": "ermita-de-san-telmo-it.mp4", "nl": "ermita-de-san-telmo-nl.mp4" } },
+    { "num": 2, "name": "Mirador de San Telmo (vía no accesible)", "files": {
+        "es": "mirador-de-san-telmo-es.mp4", "en": "mirador-de-san-telmo-en.mp4", "de": "mirador-de-san-telmo-de.mp4",
+        "fr": "mirador-de-san-telmo-fr.mp4", "it": "mirador-de-san-telmo-it.mp4", "nl": "mirador-de-san-telmo-nl.mp4" } },
+    { "num": 3, "name": "Señora de la Peña de Francia", "files": {
+        "es": "iglesia-de-nuestra-senora-de-la-pena-de-francia-es.mp4", "en": "iglesia-de-nuestra-senora-de-la-pena-de-francia-en.mp4",
+        "de": "iglesia-de-nuestra-senora-de-la-pena-de-francia-de.mp4", "fr": "iglesia-de-nuestra-senora-de-la-pena-de-francia-fr.mp4",
+        "it": "iglesia-de-nuestra-senora-de-la-pena-de-francia-it.mp4", "nl": "iglesia-de-nuestra-senora-de-la-pena-de-francia-nl.mp4" } },
+    { "num": 4, "name": "Plaza del Charco", "files": {
+        "es": "plaza-del-charco-es.mp4", "en": "plaza-del-charco-en.mp4", "de": "plaza-del-charco-de.mp4",
+        "fr": "plaza-del-charco-fr.mp4", "it": "plaza-del-charco-it.mp4", "nl": "plaza-del-charco-nl.mp4" } },
+    { "num": 5, "name": "Castillo San Felipe", "files": {
+        "es": "castillo-san-felipe-es.mp4", "en": "castillo-san-felipe-en.mp4", "de": "castillo-san-felipe-de.mp4",
+        "fr": "castillo-san-felipe-fr.mp4", "it": "castillo-san-felipe-it.mp4", "nl": "castillo-san-felipe-nl.mp4" } },
+    { "num": 6, "name": "Parque Taoro", "files": {
+        "es": "parque-taoro-es.mp4", "en": "parque-taoro-en.mp4", "de": "parque-taoro-de.mp4",
+        "fr": "parque-taoro-fr.mp4", "it": "parque-taoro-it.mp4", "nl": "parque-taoro-nl.mp4" } },
+    { "num": 7, "name": "Playa Jardín", "files": {
+        "es": "playa-jardin-es.mp4", "en": "playa-jardin-en.mp4", "de": "playa-jardin-de.mp4",
+        "fr": "playa-jardin-fr.mp4", "it": "playa-jardin-it.mp4", "nl": "playa-jardin-nl.mp4" } },
+    { "num": 8, "name": "Las Plataneras", "files": {
+        "es": "zona-de-plataneras-tradicional-es.mp4", "en": "zona-de-plataneras-tradicional-en.mp4", "de": "zona-de-plataneras-tradicional-de.mp4",
+        "fr": "zona-de-plataneras-tradicional-fr.mp4", "it": "zona-de-plataneras-tradicional-it.mp4", "nl": "zona-de-plataneras-tradicional-nl.mp4" } },
+    { "num": 9, "name": "Loro Parque", "files": {
+        "es": "loro-parque-es.mp4", "en": "loro-parque-en.mp4", "de": "loro-parque-de.mp4",
+        "fr": "loro-parque-fr.mp4", "it": "loro-parque-it.mp4", "nl": "loro-parque-nl.mp4" } },
+    { "num": 10, "name": "Zona de hoteles", "files": {
+        "es": "ruta-por-zona-hotelera-es.mp4", "en": "ruta-por-zona-hotelera-en.mp4", "de": "ruta-por-zona-hotelera-de.mp4",
+        "fr": "ruta-por-zona-hotelera-fr.mp4", "it": "ruta-por-zona-hotelera-it.mp4", "nl": "ruta-por-zona-hotelera-nl.mp4" } },
+    { "num": 11, "name": "Jardín Botánico", "files": {
+        "es": "jardin-botanico-de-aclimatacion-es.mp4", "en": "jardin-botanico-de-aclimatacion-en.mp4", "de": "jardin-botanico-de-aclimatacion-de.mp4",
+        "fr": "jardin-botanico-de-aclimatacion-fr.mp4", "it": "jardin-botanico-de-aclimatacion-it.mp4", "nl": "jardin-botanico-de-aclimatacion-nl.mp4" } },
+    { "num": 12, "name": "Mirador de la Paz", "files": {
+        "es": "mirador-de-la-paz-es.mp4", "en": "mirador-de-la-paz-en.mp4", "de": "mirador-de-la-paz-de.mp4",
+        "fr": "mirador-de-la-paz-fr.mp4", "it": "mirador-de-la-paz-it.mp4", "nl": "mirador-de-la-paz-nl.mp4" } },
+    { "num": 13, "name": "Jardines Victoria", "files": {
+        "es": "jardines-victoria-es.mp4", "en": "jardines-victoria-en.mp4", "de": "jardines-victoria-de.mp4",
+        "fr": "jardines-victoria-fr.mp4", "it": "jardines-victoria-it.mp4", "nl": "jardines-victoria-nl.mp4" } },
+    { "num": 14, "name": "Casa de los Balcones", "files": {
+        "es": "historia-de-casa-de-los-balcones-es.mp4", "en": "historia-de-casa-de-los-balcones-en.mp4", "de": "historia-de-casa-de-los-balcones-de.mp4",
+        "fr": "historia-de-casa-de-los-balcones-fr.mp4", "it": "historia-de-casa-de-los-balcones-it.mp4", "nl": "historia-de-casa-de-los-balcones-nl.mp4" } },
+    { "num": 15, "name": "Iglesia de la Concepción", "files": {
+        "es": "iglesia-de-la-concepcion-es.mp4", "en": "iglesia-de-la-concepcion-en.mp4", "de": "iglesia-de-la-concepcion-de.mp4",
+        "fr": "iglesia-de-la-concepcion-fr.mp4", "it": "iglesia-de-la-concepcion-it.mp4", "nl": "iglesia-de-la-concepcion-nl.mp4" } }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "languages": [
+    { "code": "es", "label": "ES", "flag": "🇪🇸" },
+    { "code": "en", "label": "EN", "flag": "🇬🇧" },
+    { "code": "de", "label": "DE", "flag": "🇩🇪" },
+    { "code": "fr", "label": "FR", "flag": "🇫🇷" },
+    { "code": "it", "label": "IT", "flag": "🇮🇹" },
+    { "code": "ru", "label": "RU", "flag": "🇷🇺" },
+    { "code": "pt", "label": "PT", "flag": "🇵🇹" },
+    { "code": "nl", "label": "NL", "flag": "🇳🇱" }
+  ],
+  "videoBaseUrl": "http://localhost:8080/",
+  "stops": [
+    { "num": 1, "name": "Casco antiguo de Los Cristianos (Av. Juan Carlos I)", "files": {
+        "es": "casco-antiguo-de-los-cristianos-es.mp4", "en": "casco-antiguo-de-los-cristianos-en.mp4", "de": "casco-antiguo-de-los-cristianos-de.mp4",
+        "fr": "casco-antiguo-de-los-cristianos-fr.mp4", "it": "casco-antiguo-de-los-cristianos-it.mp4", "nl": "casco-antiguo-de-los-cristianos-nl.mp4" } },
+    { "num": 2, "name": "Playa de Las Vistas", "files": {
+        "es": "playa-de-troya-es.mp4", "en": "playa-de-troya-en.mp4", "de": "playa-de-troya-de.mp4",
+        "fr": "playa-de-troya-fr.mp4", "it": "playa-de-troya-it.mp4", "nl": "playa-de-troya-nl.mp4" } },
+    { "num": 3, "name": "Puerto de Los Cristianos", "files": {
+        "es": "puerto-de-los-cristianos-es.mp4", "en": "puerto-de-los-cristianos-en.mp4", "de": "puerto-de-los-cristianos-de.mp4",
+        "fr": "puerto-de-los-cristianos-fr.mp4", "it": "puerto-de-los-cristianos-it.mp4", "nl": "puerto-de-los-cristianos-nl.mp4" } },
+    { "num": 4, "name": "Paseo marítimo", "files": {
+        "es": "paseo-maritimo-tradicional-de-los-cristianos-es.mp4", "en": "paseo-maritimo-tradicional-de-los-cristianos-en.mp4", "de": "paseo-maritimo-tradicional-de-los-cristianos-de.mp4",
+        "fr": "paseo-maritimo-tradicional-de-los-cristianos-fr.mp4", "it": "paseo-maritimo-tradicional-de-los-cristianos-it.mp4", "nl": "paseo-maritimo-tradicional-de-los-cristianos-nl.mp4" } },
+    { "num": 5, "name": "Avenida Rafael Puig", "files": {
+        "es": "avenida-rafael-puig-arona-es.mp4", "en": "avenida-rafael-puig-arona-en.mp4", "de": "avenida-rafael-puig-arona-de.mp4",
+        "fr": "avenida-rafael-puig-arona-fr.mp4", "it": "avenida-rafael-puig-arona-it.mp4", "nl": "avenida-rafael-puig-arona-nl.mp4" } },
+    { "num": 6, "name": "Playa de Las Américas", "files": {
+        "es": "playa-de-las-americas-es.mp4", "en": "playa-de-las-americas-en.mp4", "de": "playa-de-las-americas-de.mp4",
+        "fr": "playa-de-las-americas-fr.mp4", "it": "playa-de-las-americas-it.mp4", "nl": "playa-de-las-americas-nl.mp4" } },
+    { "num": 7, "name": "Mirador de San Eugenio", "files": {
+        "es": "mirador-de-san-eugenio-alto-es.mp4", "en": "mirador-de-san-eugenio-alto-en.mp4", "de": "mirador-de-san-eugenio-alto-de.mp4",
+        "fr": "mirador-de-san-eugenio-alto-fr.mp4", "it": "mirador-de-san-eugenio-alto-it.mp4", "nl": "mirador-de-san-eugenio-alto-nl.mp4" } },
+    { "num": 8, "name": "Paseo marítimo Costa Adeje", "files": {
+        "es": "paseo-maritimo-de-costa-adeje-es.mp4", "en": "paseo-maritimo-de-costa-adeje-en.mp4", "de": "paseo-maritimo-de-costa-adeje-de.mp4",
+        "fr": "paseo-maritimo-de-costa-adeje-fr.mp4", "it": "paseo-maritimo-de-costa-adeje-it.mp4", "nl": "paseo-maritimo-de-costa-adeje-nl.mp4" } },
+    { "num": 9, "name": "Zonas hoteleras de lujo Costa Adeje", "files": {
+        "es": "zonas-hoteleras-de-lujo-costa-adeje-es.mp4", "en": "zonas-hoteleras-de-lujo-costa-adeje-en.mp4", "de": "zonas-hoteleras-de-lujo-costa-adeje-de.mp4",
+        "fr": "zonas-hoteleras-de-lujo-costa-adeje-fr.mp4", "it": "zonas-hoteleras-de-lujo-costa-adeje-it.mp4", "nl": "zonas-hoteleras-de-lujo-costa-adeje-nl.mp4" } },
+    { "num": 10, "name": "La Caleta", "files": {
+        "es": "la-caleta-costa-adeje-es.mp4", "en": "la-caleta-costa-adeje-en.mp4", "de": "la-caleta-costa-adeje-de.mp4",
+        "fr": "la-caleta-costa-adeje-fr.mp4", "it": "la-caleta-costa-adeje-it.mp4", "nl": "la-caleta-costa-adeje-nl.mp4" } },
+    { "num": 11, "name": "Zonas agrícolas tradicionales", "files": {
+        "es": "zonas-agricolas-tradicionales-entorno-adeje-es.mp4", "en": "zonas-agricolas-tradicionales-entorno-adeje-en.mp4", "de": "zonas-agricolas-tradicionales-entorno-adeje-de.mp4",
+        "fr": "zonas-agricolas-tradicionales-entorno-adeje-fr.mp4", "it": "zonas-agricolas-tradicionales-entorno-adeje-it.mp4", "nl": "zonas-agricolas-tradicionales-entorno-adeje-nl.mp4" } },
+    { "num": 12, "name": "Adeje pueblo", "files": {
+        "es": "adeje-pueblo-casco-urbano-es.mp4", "en": "adeje-pueblo-casco-urbano-en.mp4", "de": "adeje-pueblo-casco-urbano-de.mp4",
+        "fr": "adeje-pueblo-casco-urbano-fr.mp4", "it": "adeje-pueblo-casco-urbano-it.mp4", "nl": "adeje-pueblo-casco-urbano-nl.mp4" } },
+    { "num": 13, "name": "Iglesia de Santa Úrsula", "files": {
+        "es": "iglesia-de-santa-ursula-adeje-es.mp4", "en": "iglesia-de-santa-ursula-adeje-en.mp4", "de": "iglesia-de-santa-ursula-adeje-de.mp4",
+        "fr": "iglesia-de-santa-ursula-adeje-fr.mp4", "it": "iglesia-de-santa-ursula-adeje-it.mp4", "nl": "iglesia-de-santa-ursula-adeje-nl.mp4" } },
+    { "num": 14, "name": "Barranco del Infierno", "files": {
+        "es": "barranco-del-infierno-inicio-del-sendero-es.mp4", "en": "barranco-del-infierno-inicio-del-sendero-en.mp4", "de": "barranco-del-infierno-inicio-del-sendero-de.mp4",
+        "fr": "barranco-del-infierno-inicio-del-sendero-fr.mp4", "it": "barranco-del-infierno-inicio-del-sendero-it.mp4", "nl": "barranco-del-infierno-inicio-del-sendero-nl.mp4" } },
+    { "num": 15, "name": "Restos de la Casa Fuerte", "files": {
+        "es": "restos-de-la-casa-fuerte-de-adeje-es.mp4", "en": "restos-de-la-casa-fuerte-de-adeje-en.mp4", "de": "restos-de-la-casa-fuerte-de-adeje-de.mp4",
+        "fr": "restos-de-la-casa-fuerte-de-adeje-fr.mp4", "it": "restos-de-la-casa-fuerte-de-adeje-it.mp4", "nl": "restos-de-la-casa-fuerte-de-adeje-nl.mp4" } }
+  ]
+}

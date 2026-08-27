@@ -1,0 +1,63 @@
+{
+  "languages": [
+    { "code": "es", "label": "ES", "flag": "🇪🇸" },
+    { "code": "en", "label": "EN", "flag": "🇬🇧" },
+    { "code": "de", "label": "DE", "flag": "🇩🇪" },
+    { "code": "fr", "label": "FR", "flag": "🇫🇷" },
+    { "code": "it", "label": "IT", "flag": "🇮🇹" },
+    { "code": "ru", "label": "RU", "flag": "🇷🇺" },
+    { "code": "pt", "label": "PT", "flag": "🇵🇹" },
+    { "code": "nl", "label": "NL", "flag": "🇳🇱" }
+  ],
+  "videoBaseUrl": "http://localhost:8080/",
+  "stops": [
+    { "num": 1, "name": "Muna", "files": {
+        "es": "museo-muna-es.mp4", "en": "museo-muna-en.mp4", "de": "museo-muna-de.mp4",
+        "fr": "museo-muna-fr.mp4", "it": "museo-muna-it.mp4", "nl": "museo-muna-nl.mp4" } },
+    { "num": 2, "name": "Plaza España", "files": {
+        "es": "plaza-de-espana-es.mp4", "en": "plaza-de-espana-en.mp4", "de": "plaza-de-espana-de.mp4",
+        "fr": "plaza-de-espana-fr.mp4", "it": "plaza-de-espana-it.mp4", "nl": "plaza-de-espana-nl.mp4" } },
+    { "num": 3, "name": "Auditorio Adán Martín", "files": {
+        "es": "auditorio-de-tenerife-es.mp4", "en": "auditorio-de-tenerife-en.mp4", "de": "auditorio-de-tenerife-de.mp4",
+        "fr": "auditorio-de-tenerife-fr.mp4", "it": "auditorio-de-tenerife-it.mp4", "nl": "auditorio-de-tenerife-nl.mp4" } },
+    { "num": 4, "name": "Recinto ferial", "files": {
+        "es": "recinto-ferial-de-tenerife-es.mp4", "en": "recinto-ferial-de-tenerife-en.mp4", "de": "recinto-ferial-de-tenerife-de.mp4",
+        "fr": "recinto-ferial-de-tenerife-fr.mp4", "it": "recinto-ferial-de-tenerife-it.mp4", "nl": "recinto-ferial-de-tenerife-nl.mp4" } },
+    { "num": 5, "name": "Casa la Pólvora", "files": {
+        "es": "casa-de-la-polvora-es.mp4", "en": "casa-de-la-polvora-en.mp4", "de": "casa-de-la-polvora-de.mp4",
+        "fr": "casa-de-la-polvora-fr.mp4", "it": "casa-de-la-polvora-it.mp4", "nl": "casa-de-la-polvora-nl.mp4" } },
+    { "num": 6, "name": "Castillo Negro", "files": {
+        "es": "castillo-negro-es.mp4", "en": "castillo-negro-en.mp4", "de": "castillo-negro-de.mp4",
+        "fr": "castillo-negro-fr.mp4", "it": "castillo-negro-it.mp4", "nl": "castillo-negro-nl.mp4" } },
+    { "num": 7, "name": "Av. La Salle", "files": {
+        "es": "av-la-salle-es.mp4", "en": "av-la-salle-en.mp4", "de": "av-la-salle-de.mp4",
+        "fr": "av-la-salle-fr.mp4", "it": "av-la-salle-it.mp4", "nl": "av-la-salle-nl.mp4" } },
+    { "num": 8, "name": "Las Ramblas", "files": {
+        "es": "las-ramblas-es.mp4", "en": "las-ramblas-en.mp4", "de": "las-ramblas-de.mp4",
+        "fr": "las-ramblas-fr.mp4", "it": "las-ramblas-it.mp4", "nl": "las-ramblas-nl.mp4" } },
+    { "num": 9, "name": "Parque García Sanabria", "files": {
+        "es": "parque-garcia-sanabria-es.mp4", "en": "parque-garcia-sanabria-en.mp4", "de": "parque-garcia-sanabria-de.mp4",
+        "fr": "parque-garcia-sanabria-fr.mp4", "it": "parque-garcia-sanabria-it.mp4", "nl": "parque-garcia-sanabria-nl.mp4" } },
+    { "num": 10, "name": "C/ El Pilar", "files": {
+        "es": "calle-del-pilar-es.mp4", "en": "calle-del-pilar-en.mp4", "de": "calle-del-pilar-de.mp4",
+        "fr": "calle-del-pilar-fr.mp4", "it": "calle-del-pilar-it.mp4", "nl": "calle-del-pilar-nl.mp4" } },
+    { "num": 11, "name": "Mercado Nuestra Señora de África", "files": {
+        "es": "mercado-nuestra-senora-de-africa-es.mp4", "en": "mercado-nuestra-senora-de-africa-en.mp4", "de": "mercado-nuestra-senora-de-africa-de.mp4",
+        "fr": "mercado-nuestra-senora-de-africa-fr.mp4", "it": "mercado-nuestra-senora-de-africa-it.mp4", "nl": "mercado-nuestra-senora-de-africa-nl.mp4" } },
+    { "num": 12, "name": "Mirador de Ifara", "files": {
+        "es": "mirador-de-ifara-es.mp4", "en": "mirador-de-ifara-en.mp4", "de": "mirador-de-ifara-de.mp4",
+        "fr": "mirador-de-ifara-fr.mp4", "it": "mirador-de-ifara-it.mp4", "nl": "mirador-de-ifara-nl.mp4" } },
+    { "num": 13, "name": "Barrio Salamanca", "files": {
+        "es": "barrio-salamanca-es.mp4", "en": "barrio-salamanca-en.mp4", "de": "barrio-salamanca-de.mp4",
+        "fr": "barrio-salamanca-fr.mp4", "it": "barrio-salamanca-it.mp4", "nl": "barrio-salamanca-nl.mp4" } },
+    { "num": 14, "name": "Monumento Ángel de la Paz", "files": {
+        "es": "monumento-al-angel-de-la-paz-es.mp4", "en": "monumento-al-angel-de-la-paz-en.mp4", "de": "monumento-al-angel-de-la-paz-de.mp4",
+        "fr": "monumento-al-angel-de-la-paz-fr.mp4", "it": "monumento-al-angel-de-la-paz-it.mp4", "nl": "monumento-al-angel-de-la-paz-nl.mp4" } },
+    { "num": 15, "name": "San Andrés", "files": {
+        "es": "castillo-san-andres-es.mp4", "en": "castillo-san-andres-en.mp4", "de": "castillo-san-andres-de.mp4",
+        "it": "castillo-san-andres-it.mp4", "nl": "castillo-san-andres-nl.mp4" } },
+    { "num": 16, "name": "Teresitas", "files": {
+        "es": "playa-de-las-teresitas-es.mp4", "en": "playa-de-las-teresitas-en.mp4", "de": "playa-de-las-teresitas-de.mp4",
+        "fr": "playa-de-las-teresitas-fr.mp4", "it": "playa-de-las-teresitas-it.mp4", "nl": "playa-de-las-teresitas-nl.mp4" } }
+  ]
+}

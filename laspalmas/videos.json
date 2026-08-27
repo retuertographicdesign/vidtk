@@ -1,0 +1,57 @@
+{
+  "languages": [
+    { "code": "es", "label": "ES", "flag": "🇪🇸" },
+    { "code": "en", "label": "EN", "flag": "🇬🇧" },
+    { "code": "de", "label": "DE", "flag": "🇩🇪" },
+    { "code": "fr", "label": "FR", "flag": "🇫🇷" },
+    { "code": "it", "label": "IT", "flag": "🇮🇹" },
+    { "code": "ru", "label": "RU", "flag": "🇷🇺" },
+    { "code": "pt", "label": "PT", "flag": "🇵🇹" },
+    { "code": "nl", "label": "NL", "flag": "🇳🇱" }
+  ],
+  "videoBaseUrl": "http://localhost:8080/",
+  "stops": [
+    { "num": 1, "name": "Parque Santa Catalina", "files": {
+        "es": "parque-santa-catalina-es.mp4", "en": "parque-santa-catalina-en.mp4", "de": "parque-santa-catalina-de.mp4",
+        "fr": "parque-santa-catalina-fr.mp4", "it": "parque-santa-catalina-it.mp4", "nl": "parque-santa-catalina-nl.mp4" } },
+    { "num": 2, "name": "Mercado del Puerto", "files": {
+        "es": "mercado-del-puerto-es.mp4", "en": "mercado-del-puerto-en.mp4", "de": "mercado-del-puerto-de.mp4",
+        "fr": "mercado-del-puerto-fr.mp4", "nl": "mercado-del-puerto-nl.mp4" } },
+    { "num": 3, "name": "Las Coloradas (Mirador)", "files": {
+        "es": "las-coloradas-mirador-es.mp4", "en": "las-coloradas-mirador-en.mp4", "de": "las-coloradas-mirador-de.mp4",
+        "fr": "las-coloradas-mirador-fr.mp4", "it": "las-coloradas-mirador-it.mp4", "nl": "las-coloradas-mirador-nl.mp4" } },
+    { "num": 4, "name": "La Puntilla & Las Canteras", "files": {
+        "es": "la-puntilla-las-canteras-es.mp4", "en": "la-puntilla-las-canteras-en.mp4", "de": "la-puntilla-las-canteras-de.mp4",
+        "fr": "la-puntilla-las-canteras-fr.mp4", "it": "la-puntilla-las-canteras-it.mp4", "nl": "la-puntilla-las-canteras-nl.mp4" } },
+    { "num": 5, "name": "Auditorio Alfredo Kraus", "files": {
+        "es": "auditorio-alfredo-kraus-es.mp4", "en": "auditorio-alfredo-kraus-en.mp4", "de": "auditorio-alfredo-kraus-de.mp4",
+        "fr": "auditorio-alfredo-kraus-fr.mp4", "it": "auditorio-alfredo-kraus-it.mp4", "nl": "auditorio-alfredo-kraus-nl.mp4" } },
+    { "num": 6, "name": "Parque Doramas", "files": {
+        "es": "parque-doramas-es.mp4", "en": "parque-doramas-en.mp4", "de": "parque-doramas-de.mp4",
+        "fr": "parque-doramas-fr.mp4", "it": "parque-doramas-it.mp4", "nl": "parque-doramas-nl.mp4" } },
+    { "num": 7, "name": "Mirador de Schamann", "files": {
+        "es": "mirador-de-schamann-es.mp4", "en": "mirador-de-schamann-en.mp4", "de": "mirador-de-schamann-de.mp4",
+        "fr": "mirador-de-schamann-fr.mp4", "it": "mirador-de-schamann-it.mp4", "nl": "mirador-de-schamann-nl.mp4" } },
+    { "num": 8, "name": "Barrio San Antonio", "files": {
+        "es": "barrio-san-antonio-es.mp4", "en": "barrio-san-antonio-en.mp4", "de": "barrio-san-antonio-de.mp4",
+        "fr": "barrio-san-antonio-fr.mp4", "it": "barrio-san-antonio-it.mp4", "nl": "barrio-san-antonio-nl.mp4" } },
+    { "num": 9, "name": "Castillo de Mata", "files": {
+        "es": "castillo-de-mata-es.mp4", "en": "castillo-de-mata-en.mp4", "de": "castillo-de-mata-de.mp4",
+        "fr": "castillo-de-mata-fr.mp4", "it": "castillo-de-mata-it.mp4", "nl": "castillo-de-mata-nl.mp4" } },
+    { "num": 10, "name": "Parque San Telmo", "files": {
+        "es": "parque-san-telmo-es.mp4", "en": "parque-san-telmo-en.mp4", "de": "parque-san-telmo-de.mp4",
+        "fr": "parque-san-telmo-fr.mp4", "it": "parque-san-telmo-it.mp4", "nl": "parque-san-telmo-nl.mp4" } },
+    { "num": 11, "name": "Parada Triana (San Telmo)", "files": {
+        "es": "parada-triana-san-telmo-es.mp4", "en": "parada-triana-san-telmo-en.mp4", "de": "parada-triana-san-telmo-de.mp4",
+        "fr": "parada-triana-san-telmo-fr.mp4", "it": "parada-triana-san-telmo-it.mp4", "nl": "parada-triana-san-telmo-nl.mp4" } },
+    { "num": 12, "name": "Vegueta (Plaza de Santa Ana)", "files": {
+        "es": "vegueta-plaza-de-santa-ana-es.mp4", "en": "vegueta-plaza-de-santa-ana-en.mp4", "de": "vegueta-plaza-de-santa-ana-de.mp4",
+        "fr": "vegueta-plaza-de-santa-ana-fr.mp4", "it": "vegueta-plaza-de-santa-ana-it.mp4", "nl": "vegueta-plaza-de-santa-ana-nl.mp4" } },
+    { "num": 13, "name": "Catedral de Santa Ana", "files": {
+        "es": "catedral-de-santa-ana-es.mp4", "en": "catedral-de-santa-ana-en.mp4", "de": "catedral-de-santa-ana-de.mp4",
+        "it": "catedral-de-santa-ana-it.mp4", "nl": "catedral-de-santa-ana-nl.mp4" } },
+    { "num": 14, "name": "Museo Canario", "files": {
+        "es": "museo-canario-es.mp4", "en": "museo-canario-en.mp4", "de": "museo-canario-de.mp4",
+        "fr": "museo-canario-fr.mp4", "it": "museo-canario-it.mp4", "nl": "museo-canario-nl.mp4" } }
+  ]
+}
