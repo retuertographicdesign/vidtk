@@ -14,21 +14,21 @@
     { "num": 1, "name": "Casco antiguo de Los Cristianos (Av. Juan Carlos I)", "files": {
         "es": "casco-antiguo-de-los-cristianos-es.mp4", "en": "casco-antiguo-de-los-cristianos-en.mp4", "de": "casco-antiguo-de-los-cristianos-de.mp4",
         "fr": "casco-antiguo-de-los-cristianos-fr.mp4", "it": "casco-antiguo-de-los-cristianos-it.mp4", "nl": "casco-antiguo-de-los-cristianos-nl.mp4" } },
-    { "num": 2, "name": "Playa de Las Vistas", "files": {
-        "es": "playa-de-troya-es.mp4", "en": "playa-de-troya-en.mp4", "de": "playa-de-troya-de.mp4",
-        "fr": "playa-de-troya-fr.mp4", "it": "playa-de-troya-it.mp4", "nl": "playa-de-troya-nl.mp4" } },
-    { "num": 3, "name": "Puerto de Los Cristianos", "files": {
+    { "num": 2, "name": "Puerto de Los Cristianos", "files": {
         "es": "puerto-de-los-cristianos-es.mp4", "en": "puerto-de-los-cristianos-en.mp4", "de": "puerto-de-los-cristianos-de.mp4",
         "fr": "puerto-de-los-cristianos-fr.mp4", "it": "puerto-de-los-cristianos-it.mp4", "nl": "puerto-de-los-cristianos-nl.mp4" } },
-    { "num": 4, "name": "Paseo marítimo", "files": {
+    { "num": 3, "name": "Paseo marítimo", "files": {
         "es": "paseo-maritimo-tradicional-de-los-cristianos-es.mp4", "en": "paseo-maritimo-tradicional-de-los-cristianos-en.mp4", "de": "paseo-maritimo-tradicional-de-los-cristianos-de.mp4",
         "fr": "paseo-maritimo-tradicional-de-los-cristianos-fr.mp4", "it": "paseo-maritimo-tradicional-de-los-cristianos-it.mp4", "nl": "paseo-maritimo-tradicional-de-los-cristianos-nl.mp4" } },
-    { "num": 5, "name": "Avenida Rafael Puig", "files": {
+    { "num": 4, "name": "Avenida Rafael Puig", "files": {
         "es": "avenida-rafael-puig-arona-es.mp4", "en": "avenida-rafael-puig-arona-en.mp4", "de": "avenida-rafael-puig-arona-de.mp4",
         "fr": "avenida-rafael-puig-arona-fr.mp4", "it": "avenida-rafael-puig-arona-it.mp4", "nl": "avenida-rafael-puig-arona-nl.mp4" } },
-    { "num": 6, "name": "Playa de Las Américas", "files": {
+    { "num": 5, "name": "Playa de Las Américas", "files": {
         "es": "playa-de-las-americas-es.mp4", "en": "playa-de-las-americas-en.mp4", "de": "playa-de-las-americas-de.mp4",
         "fr": "playa-de-las-americas-fr.mp4", "it": "playa-de-las-americas-it.mp4", "nl": "playa-de-las-americas-nl.mp4" } },
+    { "num": 6, "name": "Playa de Troya", "files": {
+        "es": "playa-de-troya-es.mp4", "en": "playa-de-troya-en.mp4", "de": "playa-de-troya-de.mp4",
+        "fr": "playa-de-troya-fr.mp4", "it": "playa-de-troya-it.mp4", "nl": "playa-de-troya-nl.mp4" } },
     { "num": 7, "name": "Mirador de San Eugenio", "files": {
         "es": "mirador-de-san-eugenio-alto-es.mp4", "en": "mirador-de-san-eugenio-alto-en.mp4", "de": "mirador-de-san-eugenio-alto-de.mp4",
         "fr": "mirador-de-san-eugenio-alto-fr.mp4", "it": "mirador-de-san-eugenio-alto-it.mp4", "nl": "mirador-de-san-eugenio-alto-nl.mp4" } },
